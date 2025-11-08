@@ -5,7 +5,7 @@ A clean, modern, beginner‑friendly CRUD backend built using **Node.js**, **Exp
 
 ✅ Only **GET & POST** routes used
 ✅ Full CRUD (Create, Read, Update, Delete)
-✅ Model stored separately in `/models/student.js`
+✅ Model stored separately in `/model/student.model.js`
 ✅ Views built using **Bootstrap (responsive + modern UI)**
 ✅ All backend logic written inside **index.js**
 
