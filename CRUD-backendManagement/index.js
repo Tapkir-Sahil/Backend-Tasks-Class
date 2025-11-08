@@ -13,9 +13,6 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static('public/'))
 app.use(express.json())
 
-
-
-
 // app.get('/', (req, res) => {
 //   res.render('home.ejs')
 // })
@@ -26,12 +23,10 @@ app.get("/", async (req, res) => {
   res.render("home.ejs", { students });
 });
 
-
 //CREATE - Show add page
 app.get("/add", (req, res) => {
   res.render("add");
 });
-
 
 //INSERT
 app.post("/add", async (req, res) => {
@@ -46,21 +41,17 @@ app.get("/edit/:id", async (req, res) => {
   res.render("edit", { student });
 });
 
-
 //UPDATE
 app.post("/update/:id", async (req, res) => {
   await Student.findByIdAndUpdate(req.params.id, req.body);
   res.redirect("/");
 });
 
-
-
 //DELETE
 app.get("/delete/:id", async (req, res) => {
   await Student.findByIdAndDelete(req.params.id);
   res.redirect("/");
 });
-
 
 //SERVER
 app.listen(PORT,()=>{
